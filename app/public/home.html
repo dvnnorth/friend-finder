@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Friend Finder</title>
+</head>
+
+<body>
+
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="home.html" class="brand-logo">Friend Finder</a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="survey.html">Survey</a>
+        </li>
+        <li>
+          <a href="/api/friends">API Friends List</a>
+        </li>
+        <li>
+          <a href="https://www.github.com/dvnnorth/friend-finder/">Github Repo</a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li>
+          <a href="survey.html">Survey</a>
+          <a href="/api/friends">API Friends List</a>
+          <a href="https://www.github.com/dvnnorth/friend-finder/">Github Repo</a>
+        </li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br>
+      <br>
+      <h1 class="header center light-blue-text">Welcome to Friend Finder!</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Answer a few basic questions,</h5>
+        <h5 class="header col s12 light">Then find the friend with the greatest compatibility!</h5>
+      </div>
+      <div class="row center">
+        <a href="survey.html" id="form-link-button" class="btn-large waves-effect waves-light blue">
+          <i class="material-icons left">assignment</i> Get Started</a>
+      </div>
+      <br>
+      <br>
+
+    </div>
+  </div>
+
+  <footer class="page-footer light-blue">
+    <div class="container valign-wrapper">
+      <div class="row">
+        <div class="col s12">
+          Made by
+          <a class="blue-text text-lighten-4" href="http://www.github.com/dvnnorth/">Devin North</a>
+          with
+          <a class="blue-text text-lighten-4" href="http://materializecss.com">Materialize</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="frontEnd.js"></script>
+</body>
+
+</html>

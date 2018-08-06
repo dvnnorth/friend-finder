@@ -1,0 +1,52 @@
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  z-index: 1;
+}
+
+/* label color */
+
+.input-field label {
+  color: #000 !important;
+  font-size: 1.2em !important;
+}
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+  color: #000 !important;
+}
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #2196f3 !important;
+  box-shadow: 0 1px 0 0 #1e88e5 !important;
+}
+
+/* valid color */
+
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #2196f3 !important;
+  box-shadow: 0 1px 0 0 #1e88e5 !important;
+}
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #f44336 !important;
+  box-shadow: 0 1px 0 0 #e53935 !important;
+}
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+  color: #000 !important;
+}
+
+/* Dropdown Content */
+
+.dropdown-content span {
+  color: #000 !important;
+}

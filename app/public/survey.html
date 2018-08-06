@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Friend Finder</title>
+</head>
+
+<body>
+
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="home.html" class="brand-logo">Friend Finder</a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="survey.html">Survey</a>
+        </li>
+        <li>
+          <a href="/api/friends">API Friends List</a>
+        </li>
+        <li>
+          <a href="https://www.github.com/dvnnorth/friend-finder/">Github Repo</a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li>
+          <a href="survey.html">Survey</a>
+          <a href="/api/friends">API Friends List</a>
+          <a href="https://www.github.com/dvnnorth/friend-finder/">Github Repo</a>
+        </li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+  </nav>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br>
+      <br>
+      <h1 class="header center light-blue-text">Survey Questions</h1>
+      <br>
+      <h6 class="header center">All fields are required.</h6>
+      <h6 class="header center">Answer truthfully and to the best of your ability.</h6>
+      <br>
+      <br>
+      <div class="row">
+        <form class="col s12" id="personality-form">
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="John" id="firstName" type="text" class="validate">
+              <label for="firstName">
+                First Name
+              </label>
+              <h6 class="header red-text invalid hide" id="firstNameInvalid">Field cannot be blank or start with numbers or symbols</h6>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Smith" id="lastName" type="text" class="validate">
+              <label for="lastName">Last Name</label>
+              <h6 class="header red-text invalid hide" id="lastNameInvalid">Field cannot be blank or start with numbers or symbols</h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="https://www.imgsite.com/url" id="imgURL" type="text" class="validate">
+              <label for="imgURL">
+                Link to Profile Image
+              </label>
+              <h6 class="header red-text invalid hide" id="imgURLInvalid">Must be a valid img URL with extension .png, .jpg, .jpeg, .gif, .png, or .svg and http:// or https:// prefix</h6>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="header">
+              <strong>Question 1:</strong> Your mind is always buzzing with unexplored ideas and plans.</h6>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your answer</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <h6 class="header red-text invalid hide" id="question1Invalid">Question 1 must be answered</h6>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="header">
+              <strong>Question 2:</strong> Generally speaking, you rely more on your experience than your imagination.</h6>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your answer</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <h6 class="header red-text invalid hide" id="question2Invalid">Question 2 must be answered</h6>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="header">
+              <strong>Question 3:</strong> You find it easy to stay relaxed and focused even when there is some pressure.
+            </h6>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your answer</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <h6 class="header red-text invalid hide" id="question3Invalid">Question 3 must be answered</h6>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="header">
+              <strong>Question 4:</strong> You rarely do something just out of sheer curiosity.</h6>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your answer</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <h6 class="header red-text invalid hide" id="question4Invalid">Question 4 must be answered</h6>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="header">
+              <strong>Question 5:</strong> People can rarely upset you.</h6>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your answer</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <h6 class="header red-text invalid hide" id="question5Invalid">Question 5 must be answered</h6>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="header">
+              <strong>Question 6:</strong> It is often difficult for you to relate to other people’s feelings.</h6>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your answer</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <h6 class="header red-text invalid hide" id="question6Invalid">Question 6 must be answered</h6>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="header">
+              <strong>Question 7:</strong> In a discussion, truth should be more important than people’s sensitivities.</h6>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your answer</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <h6 class="header red-text invalid hide" id="question7Invalid">Question 7 must be answered</h6>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="header">
+              <strong>Question 8:</strong> You rarely get carried away by fantasies and ideas.</h6>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your answer</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <h6 class="header red-text invalid hide" id="question8Invalid">Question 8 must be answered</h6>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="header">
+              <strong>Question 9:</strong> You think that everyone’s views should be respected regardless of whether they are supported
+              by facts or not.</h6>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your answer</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <h6 class="header red-text invalid hide" id="question9Invalid">Question 9 must be answered</h6>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="header">
+              <strong>Question 10:</strong> You feel more energetic after spending time with a group of people.</h6>
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your answer</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+              <h6 class="header red-text invalid hide" id="question10Invalid">Question 10 must be answered</h6>
+            </div>
+          </div>
+        </form>
+        <a href="#submit-button" id="submit-button" class="btn-large waves-effect waves-light blue">
+          Submit
+          <i class="material-icons right">send</i>
+        </a>
+        <h6 class="header red-text hide" id="invalidNotice">Invalid Input</h6> 
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+
+  <footer class="page-footer light-blue">
+    <div class="container valign-wrapper">
+      <div class="row">
+        <div class="col s12">
+          Made by
+          <a class="blue-text text-lighten-4" href="http://www.github.com/dvnnorth/">Devin North</a>
+          with
+          <a class="blue-text text-lighten-4" href="http://materializecss.com">Materialize</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="frontEnd.js"></script>
+</body>
+
+</html>
