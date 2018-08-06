@@ -23,9 +23,6 @@ module.exports = function (app) {
 
     friends.push(newPerson);
 
-    console.log("friends: ", friends);
-    console.log("bestMatches: ", bestMatches);
-
     res.json(bestMatches[Math.floor(Math.random() * bestMatches.length)]);
   });
 

@@ -37,7 +37,12 @@ $(() => {
         let image = $("<img>").attr("src", data.imgURL).attr("id", "avatar-image");
         $("#matchBody").empty();
         $("#matchBody").append($("<br>")).append(name).append(image);
-        instance.open();        
+        instance.open();
+        $("#firstName").val("");
+        $("#lastName").val("");
+        $("#imgURL").val("");
+        $("select").prop("selectedIndex", 0);
+        instances = M.FormSelect.init(elems);
       });
     }
     else {
