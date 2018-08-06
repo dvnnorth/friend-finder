@@ -50,3 +50,10 @@ footer {
 .dropdown-content span {
   color: #000 !important;
 }
+
+/* Avatar image */
+
+#avatar-image {
+  width: 100%;
+  height: auto;
+}

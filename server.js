@@ -1,11 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const path = require("path");
-
 const app = express();
+const PORT = process.env.PORT || 8000;
 
-const friends = require("/data/friends.js");
+app.use(express.static(__dirname + "/app/public"));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-friends.push("friendo");
+require(__dirname + "/app/routing/htmlRoutes.js")(app);
+require(__dirname + "/app/routing/apiRoutes.js")(app);
 
-console.log(friends);
+app.listen(PORT, () => { console.log("Running on http://localhost:" + PORT) });

@@ -30,8 +30,15 @@ $(() => {
     clearInvalidInputMessages();
 
     if (validity.valid) {
-      console.log("Yahtzee!");
-      console.log(newPerson);
+      $.post("/api/friends", newPerson, (data) => {
+        let modalElem = document.querySelector("#matchModal");
+        let instance = M.Modal.init(modalElem);
+        let name = $("<h4>").attr("class", "header").text(data.firstName + " " + data.lastName);
+        let image = $("<img>").attr("src", data.imgURL).attr("id", "avatar-image");
+        $("#matchBody").empty();
+        $("#matchBody").append($("<br>")).append(name).append(image);
+        instance.open();        
+      });
     }
     else {
       $("#invalidNotice").removeClass("hide");
@@ -54,7 +61,7 @@ $(() => {
 
   function validate(personObj) {
     let nameValidate = /^[A-Za-z\xC0-\xFF][A-Za-z\xC0-\xFF'-]+([ A-Za-z\xC0-\xFF][A-Za-z\xC0-\xFF'-]+)*/;
-    let urlValidate = /(http)?s?:?(\/\/[^"']*\.(?:png|jpg|jpeg|gif|png|svg))/;
+    let urlValidate = /(http)?s?:?(\/\/[^"']*\.(?:png|jpg|jpeg|gif|svg|PNG|JPG|JPEG|GIF|SVG))/;
     let validity = {
       valid: true,
       issues: []
